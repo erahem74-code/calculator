@@ -60,3 +60,133 @@ form input.equal{
 form input.operator{
     color: #33ffd8;
 }
+
+/* ===== تحسين عام (يمنع التمدد وتكبّر الحاسبة) ===== */
+.calculator{
+    width: 100%;
+    max-width: 380px;
+}
+
+.calculator form > div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.calculator form .display input{
+    width: 100%;
+    min-width: 0;
+}
+
+/* ===== شاشات كبيرة جداً (TV / 4K) ===== */
+@media (min-width: 1600px){
+    .calculator{
+        max-width: 480px;
+        padding: 30px;
+    }
+    .calculator form input{
+        width: 80px;
+        height: 80px;
+        font-size: 26px;
+        margin: 12px;
+    }
+    form .display input{
+        font-size: 58px;
+        height: 80px;
+    }
+    form input.equal{
+        width: 9em;
+    }
+}
+
+/* ===== لابتوب صغير / تابلت أفقي ===== */
+@media (max-width: 1024px){
+    .calculator{
+        max-width: 360px;
+    }
+}
+
+/* ===== تابلت عمودي ===== */
+@media (max-width: 768px){
+    .calculator{
+        max-width: 340px;
+        padding: 18px;
+    }
+    .calculator form input{
+        width: 58px;
+        height: 58px;
+        font-size: 19px;
+        margin: 8px;
+    }
+    form .display input{
+        font-size: 38px;
+        height: 58px;
+    }
+}
+
+/* ===== هاتف كبير ===== */
+@media (max-width: 480px){
+    .calculator{
+        max-width: 320px;
+        padding: 15px;
+    }
+    .calculator form input{
+        width: 52px;
+        height: 52px;
+        font-size: 18px;
+        margin: 6px;
+    }
+    form .display{
+        margin: 12px 6px;
+    }
+    form .display input{
+        font-size: 32px;
+        height: 52px;
+    }
+    form input.equal{
+        width: 6.5em;
+    }
+}
+
+/* ===== هاتف صغير ===== */
+@media (max-width: 360px){
+    .calculator{
+        max-width: 290px;
+        padding: 12px;
+    }
+    .calculator form input{
+        width: 46px;
+        height: 46px;
+        font-size: 16px;
+        margin: 5px;
+    }
+    form .display input{
+        font-size: 26px;
+        height: 46px;
+    }
+    form input.equal{
+        width: 5.8em;
+    }
+}
+
+/* ===== شاشات قصيرة الارتفاع (وضع أفقي في الهاتف) ===== */
+@media (max-height: 520px){
+    .container{
+        height: auto;
+        min-height: 100vh;
+        padding: 10px 0;
+    }
+    .calculator form input{
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+        margin: 4px;
+    }
+    form .display{
+        margin: 8px;
+    }
+    form .display input{
+        font-size: 28px;
+        height: 44px;
+    }
+}
